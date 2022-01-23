@@ -38,6 +38,6 @@ export class AcuityConfigError extends Error {
   }
 
   public static fromDecodingError(errors: t.Errors) {
-    return this.of(formatValidationErrors(errors).join('\n'))
+    return AcuityConfigError.of(formatValidationErrors(errors).join('\n'))
   }
 }
